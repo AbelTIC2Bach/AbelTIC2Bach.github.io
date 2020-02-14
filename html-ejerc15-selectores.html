@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>html-ejerc15-selectores</title>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <h1>Tipos de selectores que entran en examen</h1>
+        <ol>
+            <li><h2>Clase (class=””)</h2>
+                <p>Selecciona todos los elementos que hayan sido asignados (en el html) con la misma clase.</p>
+                <p>Ejemplo de su uso al usar ".ejemplo1" dentro de la etiqueta "style":</p>
+                <p>&lt;p class="ejemplo1"> este texto está seleccionado &lt;/p><br>
+                &lt;p> este texto no está eleccionado &lt;/p><br>
+                &lt;p class="ejemplo1"> este texto está seleccionado &lt;/p><br>
+                &lt;p> este texto no está eleccionado &lt;/p></p></li>
+
+            <li><h2>Identificador (id=””)</h2>
+                <p>Es un selector único, selecciona el elemento al que le haya sido asignado (en el html) dicho id.</p>
+                <p>Ejemplo de su uso al usar "#ejemplo2" dentro de la etiqueta "style":</p>            
+                <p>&lt;p> este texto no está eleccionado &lt;/p><br>
+                &lt;p id="ejemplo2"> este texto está seleccionado &lt;/p><br>
+                &lt;p> este texto no está eleccionado &lt;/p></p></li>
+
+            <li><h2>Todos los elementos (*)</h2>
+                <p>Selecciona todos los elementos del archivo, permitiendo así cambiar el formato general de este.</p>
+                <p>Ejemplo de su uso al usar "*" dentro de la etiqueta "style":</p>               
+                <p>&lt;h1> este texto está seleccionado &lt;/h1><br>
+                &lt;p> este texto está seleccionado &lt;/p><br>
+                &lt;p> este texto está eleccionado &lt;/p></p></li>
+
+            <li><h2>Varios elementos ( p, em, h1, h2)</h2>
+                <p>Selecciona todos los elementos que pertenezcan a alguna de estas etiquetas, las comas tienen una función "o".</p>
+                <p>Ejemplo de su uso al usar "h2, p" dentro de la etiqueta "style":</p>
+                <p>&lt;h1> este texto no está seleccionado &lt;/h1><br>
+                &lt;h2> este texto está seleccionado &lt;/h2><br>
+                &lt;h3> este texto no está seleccionado &lt;/h3><br>
+                &lt;p> este texto está eleccionado &lt;/p> </p></li>
+
+            <li><h2>Elementos contenidos en otros elementos (ol li)</h2>
+                <p>Selecciona todos los elementos que pertenezcan a su vez al elemento anterior, el espacio (al no haber comas) tiene una función "y".</p>
+                <p>Ejemplo de su uso al usar "p strong" dentro de la etiqueta "style":</p>
+                <p>&lt;h1> no &lt;strong>está&lt;/strong> seleccionada ninguna palabra &lt;/h1><br>
+                &lt;p> solo está &lt;strong>seleccionada&lt;/strong> la palabra en negrita &lt;/p><br>
+                &lt;h3> no está seleccionada &lt;strong>ninguna&lt;/strong> palabra &lt;/h3><br>
+                &lt;p> solo está seleccionada la palabra en &lt;strong>negrita&lt;/strong> &lt;/p></p></li>
+
+            <li><h2>Sobrevuleo (p:hover)</h2>
+                <p>Se coloca únicamente dentro de la etiqueta style, sobre otras etiquetas o selectores. Sirve para darle un estilo a los elementos seleccionados que solo se aplica cuando pasamos el ratón por encima de ellos.</p>
+                <p>Ejemplo de su uso al usar "em: hover" dentro de la etiqueta "style":</p>
+                <p>&lt;h1> &lt;em>solo&lt;/em> está seleccionada la palabra en cursiva &lt;/h1><br>
+                &lt;h2> solo está &lt;em>seleccionada&lt;/em> la palabra en cursiva &lt;/h2><br>
+                &lt;h3> solo está seleccionada la &lt;em>palabra&lt;/em> en cursiva &lt;/h3><br>
+                &lt;p> solo está seleccionada la palabra en &lt;em>cursiva&lt;/em> &lt;/p> </p></li>
+        </ol>           
+
+    </body>
+</html>
