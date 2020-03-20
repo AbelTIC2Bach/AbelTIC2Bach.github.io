@@ -15,7 +15,7 @@
             #fondo {justify-content: center; margin-bottom: 40px;
             background: linear-gradient(rgb(50, 250, 217) 0%, rgb(171, 144, 196) 20%, rgb(255, 249, 158) 40%, rgb(50, 250, 217) 60%, rgb(171, 144, 196) 80%, rgb(255, 249, 158) 100%);
             background-size: 400% 300%;
-            animation: BgGradient 10s ease infinite;}
+            animation: BgGradient 30s ease infinite;}
             @keyframes BgGradient {
                 0% {background-position: 50% 0%;}
                 33% {background-position: 50% 30%;}
@@ -42,13 +42,7 @@
             .return a {border: 4px outset grey; color: black; text-align: center; font-family: cursive;}
             #R1:hover, #R2:hover, #R3:hover {border: 3px inset grey; background-image: radial-gradient(rgb(114, 31, 31),rgb(255, 255, 255));}
             
-            #R1 {background: linear-gradient(150deg, rgb(50, 250, 217), rgb(171, 144, 196), rgb(255, 249, 158));
-            background-size: 400% 300%;
-            animation: BgGradientB 10s ease infinite;}
-            #R2 {background: linear-gradient(150deg, rgb(50, 250, 217), rgb(171, 144, 196), rgb(255, 249, 158));
-            background-size: 400% 300%;
-            animation: BgGradientB 10s ease infinite;}
-            #R3 {background: linear-gradient(150deg, rgb(50, 250, 217), rgb(171, 144, 196), rgb(255, 249, 158));
+            #R1, #R2, #R3 {background: linear-gradient(150deg, rgb(94, 255, 228), rgb(171, 144, 196), rgb(255, 249, 158));
             background-size: 400% 300%;
             animation: BgGradientB 10s ease infinite;}
             @keyframes BgGradientB {
@@ -56,9 +50,9 @@
                 50% {background-position: 100% 50%;}
                 100% {background-position: 0% 50%;}}
             
-            input#spoiler {
+            input#oculto {
             display: none;}
-            input#spoiler+label {
+            input#oculto+label {
                 display: block;
                 width: 200px;
                 margin: 0 auto;
@@ -70,10 +64,10 @@
                 border-radius: 8px;
                 cursor: pointer;
                 transition: all .6s;}
-            input#spoiler:checked+label {
+            input#oculto:checked+label {
                 color: rgb(51, 51, 51);
                 background: rgb(204, 204, 204);}
-            input#spoiler~.spoiler {
+            input#oculto~.oculto {
                 width: 90%;
                 height: 0;
                 overflow: hidden;
@@ -84,7 +78,7 @@
                 border: 1px solid rgb(120, 231, 157);
                 border-radius: 8px;
                 transition: all .6s;}
-            input#spoiler:checked+label+.spoiler {
+            input#oculto:checked+label+.oculto {
                 height: auto;
                 opacity: 1;
                 padding: 10px;}
@@ -170,9 +164,9 @@
                 <p class="return"><a id="R3" href="#inicio">Volver al inicio</a></p>
             </div>
         </div>
-        <input type="checkbox" id="spoiler" />
-        <label for="spoiler">Web hosting</label>
-        <div class="spoiler">
+        <input type="checkbox" id="oculto"/>
+        <label for="oculto">Web hosting</label>
+        <div class="oculto">
             <p> Es un servicio de alquiler de un espacio dentro de un servidor donde podrás alojar tu página web haciendo
                 que
                 esta pueda ser visitada por cualquier usuario de internet a cualquier hora del dia</p>
