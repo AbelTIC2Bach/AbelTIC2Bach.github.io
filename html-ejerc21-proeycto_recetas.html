@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proyecto:Libro de recetas</title>
+        <meta charset="utf-8">
+        <style>
+            header {padding: 10px; background-image: linear-gradient(rgb(139, 228, 231),rgb(225, 231, 139));}
+            .boton a {border-radius: 7px; border: 1px dotted black; background-image: linear-gradient(rgb(225, 231, 139),rgb(139, 228, 231)); color: black; text-align: center;}
+            .boton a:hover {background-image: radial-gradient(rgb(248, 255, 152),rgb(124, 195, 197));}
+            a {text-decoration: none; padding: 5px;}
+            ol li {line-height: 35px; }
+            
+            div#B_arroz {background: url("ejerc21-proeycto_recetas/arroz.jpg"); background-size: cover; background-position: center; border: 2px solid black; border-bottom: 1px solid black;}
+            div#B_natillas {background: url("ejerc21-proeycto_recetas/natillas.jpg"); background-size: cover; background-position: center; border: 2px solid black; border-top: 1px solid black; border-bottom: 1px solid black;}
+            div#B_pasta {background: url("ejerc21-proeycto_recetas/pasta.jpg"); background-size: cover; background-position: center; border: 2px solid black; border-top: 1px solid black;}
+            div.texto  {margin: 30px; padding: 15px; background-color: white; border: 1px solid black;border-radius: 30px; opacity: 0.8;}
+                        
+            table {border: 1px solid black; padding: 5px; font-family: Georgia, 'Times New Roman', Times, serif;}
+            th {border-bottom: 2px double rgb(0, 0, 167);}
+            td {padding: 5px;}
+            tr {border-collapse: collapse;}
+            tr:nth-child(even) {background-color: #dbdbdb;}
+            td:nth-child(even) {text-align: center;}
+
+            p {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+            h1 {font-family: serif; font-size: 40px;}
+            h2 {font-family: cursive;}
+            header h2 {font-family: fantasy; font-size: 30px;}
+            em {font-weight: 550; color: rgb(54, 54, 54);}
+            strong {font-size: 18px;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>El libro de recetas de Abel</h1>
+            
+            <h2>Contenidos del libro: Mis tres platos favoritos</h2>
+            
+            <ol>
+                <li class="boton"><a href="#B_arroz">Arroz a la cubana</a></li>
+                <li class="boton"><a href="#B_natillas">Natillas de Vainilla</a></li>
+                <li class="boton"><a href="#B_pasta">Pasta a la boloñesa</a></li>
+            </ol>
+        </header>
+        <div id="B_arroz">
+            <div class="texto">
+                <h2>Arroz a la cubana</h2>
+                
+                <ul>
+                    <li>Tiempo aproximado: 30 min</li>
+                    <li>Comensales: 2</li>
+                </ul>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ingredientes</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arroz</td>
+                            <td>200 g</td>
+                        </tr>
+                        <tr>
+                            <td>Huevos</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Tomate frito</td>
+                            <td>200 g</td>
+                        </tr>
+                        <tr>
+                            <td>Aceite de oliva</td>
+                            <td>1 chorro</td>
+                        </tr>
+                        <tr>
+                            <td>Sal</td>
+                            <td>1 pizca</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Paso 1: </strong>Ponemos un cazo con abundante agua y un poco de sal, cuando empiece el agua a hervir <em>añadimos el arroz</em>, lo iremos removiendo de vez en cuando para que nos quede suelto el arroz cubano.</p>
+                <p><strong>Paso 2: </strong>Una vez cocido el arroz lo colamos y <em>enjuagamos con abundante agua fría</em>. Lo escurrimos bien.</p>
+                <p><strong>Paso 3: </strong>Servimos el arroz a cada comensal en un plato. <em>Cubrimos con el tomate frito</em> que hemos calentado previamente.</p>
+                <p><strong>Paso 4: </strong>Cogemos una sartén, ponemos un poco de aceite de oliva y <em>hacemos el huevo frito.</em></p>
+                <p><strong>Paso 5: </strong>Colocamos encima del arroz con tomate el huevo <em>¡y listo para comer!</em></p>
+                
+                <p><em>Fuente: <a href="https://www.recetasgratis.net/receta-de-arroz-a-la-cubana-facil-y-rapido-72089.html">RecetasGratis</a></em></p>
+            </div>
+        </div>
+        <div id="B_natillas">
+            <div class="texto">
+                <h2>Natillas de Vainilla</h2>
+                
+                <ul>
+                    <li>Tiempo aproximado: 30 min</li>
+                    <li>Comensales: 4</li>
+                </ul>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ingredientes</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yemas de huevo</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Leche</td>
+                            <td>500 ml</td>
+                        </tr>
+                        <tr>
+                            <td>Maicena</td>
+                            <td>12 g</td>
+                        </tr>
+                        <tr>
+                            <td>Azúcar</td>
+                            <td>72 g</td>
+                        </tr>
+                        <tr>
+                            <td>Vaina de vainilla</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Canela en polvo</td>
+                            <td>A gusto</td>
+                        </tr>
+                        <tr>
+                            <td>Galletas</td>
+                            <td>A gusto</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Paso 1: </strong>Cogemos la vaina de la vainilla y vamos a proceder a <em>extraer el extracto de vainilla</em>.<br>Para ello, con la ayuda de un cuchillo afilado, realizamos sobre la vaina un corte longitudinal profundo pero sin sobrepasar la otra parte de la vaina.<br>En el interior podremos apreciar unas diminutas bolitas de color negro, estas son las que deberemos extraer con la ayuda de una pequeña espátula o el mismo cuchillo.</p>
+                <p><strong>Paso 2: </strong>Una vez tengamos el extracto, pondremos a <em>calentar la leche</em>, reservando tan solo medio vaso, el azúcar y el extracto de vainilla y lo llevaremos a punto de ebullición.</p>
+                <p><strong>Paso 3: </strong>Mientras se calienta, <em>separamos las claras</em> de las yemas.</p>
+                <p><strong>Paso 4: </strong><em>Añadimos a las yemas, la maicena y la leche</em> y removemos hasta que quede totalmente integrado.</p>
+                <p><strong>Paso 5: </strong>Este último paso <em>lo añadiremos a la leche con la vainilla</em> que estábamos calentando cuando empiece a hervir.</p>
+                <p><strong>Paso 6: </strong>Removemos hasta que espese y <em>retiramos del fuego</em>.</p>
+                <p><strong>Paso 7: </strong>Servimos en el recipiente deseado, <em>añadimos las galletas</em> y enfriamos en el frigorífico.</p>
+                <p><strong>Paso 8: </strong><em>Y…VOILÀ!</em> Ya tenemos nuestra estupendas natillas de vainilla listas para disfrutar.</p>
+                
+                <p><em>Fuente: <a href="https://www.lolitalapastelera.com/natillas-caseras-de-vainilla/">Lolita la pastelera</a></em></p>
+            </div>
+        </div>
+        <div id="B_pasta">
+            <div class="texto">
+                <h2>Pasta a la boloñesa</h2>
+                
+                <ul>
+                    <li>Tiempo aproximado: 1 h 10 min</li>
+                    <li>Comensales: 4</li>
+                </ul>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ingredientes</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pasta</td>
+                            <td>0,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Pimiento verde</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Carne molida</td>
+                            <td>0,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Tomates pelados</td>
+                            <td>1 lata</td>
+                        </tr>
+                        <tr>
+                            <td>Tomate natural</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Vino tinto</td>
+                            <td>0,25 tazas</td>
+                        </tr>
+                        <tr>
+                            <td>Dientes de ajo</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Aceite</td>
+                            <td>2 cucharadas</td>
+                        </tr>
+                        <tr>
+                            <td>Pimienta</td>
+                            <td>1 pizca</td>
+                        </tr>
+                        <tr>
+                            <td>Sal</td>
+                            <td>1 pizca</td>
+                        </tr>
+                        <tr>
+                            <td>Cebolla</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Hierbas provenzales</td>
+                            <td>1 cucharada</td>
+                        </tr>
+                        <tr>
+                            <td>Queso parmesano</td>
+                            <td>A gusto</td>
+                        </tr>
+                        <tr>
+                            <td>Albahaca</td>
+                            <td>6 hojas</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Paso 1: </strong>Ponemos una pizca de <em>aceite de oliva en una sartén</em> y la dejamos a fuego medio.</p>
+                <p><strong>Paso 2: </strong>Cuando esté caliente <em>echamos la carne</em>, la salpimentamos y la doramos.</p>
+                <p><strong>Paso 3: </strong><em>Agregamos los ajos, la cebolla y el pimiento</em> cortados en trozos pequeños, y las hierbas provenzales. Subimos el fuego y cocinamos todo durante cinco minutos.</p>
+                <p><strong>Paso 4: </strong>Transcurrido este tiempo <em>incorporamos el vino</em> y dejamos que se evapore el alcohol.</p>
+                <p><strong>Paso 5: </strong><em>Añadimos los tomates pelados y el tomate fresco</em>, cortado en trozos grandes. Bajamos un poco el fuego y cocinamos el conjunto durante un cuarto de hora. Cuando queden cinco minutos incorporamos las hojas de albahaca.</p>
+                <p><strong>Paso 6: </strong>Al mismo tiempo, <em>ponemos una cacerola</em> con suficiente agua y una pizca de sal. La dejamos a fuego medio y cuando rompa a hervir <em>echamos la pasta y la cocinamos</em> siguiendo las indicaciones del fabricante. </p>
+                <p><strong>Paso 7: </strong>Una vez que la pasta esté hecha y escurrida, la ponemos en una fuente y echamos la boloñesa por encima. Si queremos, podemos espolvorear el parmesano rallado. <em>¡Deliciosa!</em></p>
+                
+                <p><em>Fuente: <a href="https://www.recetario-cocina.com/receta/pasta-a-la-bolonesa/">Recetario de cocina</a></em></p>
+            </div>
+        </div>
+    </body>
+</html>

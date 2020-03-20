@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Tabla</title>
+        <meta charset="utf-8">
+        <style>            
+           body {background-color: black; color: white;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+            h1 {font-family: serif; font-size: 40px; border-bottom: 5px; border-bottom-style: ridge;}
+            h2 {color: rgb(255, 194, 194); font-family: Georgia, 'Times New Roman', Times, serif;}
+
+            table {text-align: center;
+                    padding: 5px;
+                    border: 3px;
+                    border-radius: 10px;
+                    border-style: groove;
+                    font-family: cursive;}
+            th {border-bottom: navy;
+                      border-style: double;
+                      border-top: none; border-left: none; border-right: none; text-align: center;}
+            td {border-style: dotted; border-width: 1px; width: 200px;}
+            tr {height: 140px;}
+            thead tr {height: 70px;}
+            
+            .container { position: relative; width: 95%; height: 95%; margin: auto;}
+            .image {display: block; width: 100%;}
+            .overlay {position: absolute; top: 0; bottom: 0; left: 0;right: 0; height: 100%; width: 100%; opacity: 0; transition: .5s ease; background-color: #008CBA;}
+            .container:hover .overlay {opacity: 1;}
+            .text {color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);}
+
+            .logo {width: 25%;}
+            .logo:hover {width: 55%;}
+        </style>
+    </head>
+    <body>
+        <header><h1>Músicas</h1>
+        <p>En este ejercicio he recopilado distintos grupos y artistas de varios géneros de música por países. Aunque en un principio parecía que iba a ser fácil, pronto me di cuenta de lo mucho que varían los estilos de música de un país a otro. Sin embargo, he acabado encontrando artistas de todos ellos (aun de géneros poco habituales hoy en día como la música clásica).</p>
+        </header>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th><h2>Paises</h2</th>
+                    <th><h2>Clásica</h2></th>
+                    <th><h2>Pop</h2></th>
+                    <th><h2>Electrónica</h2></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div class="container">
+                        <img src="ejerc20-tabla/España.png" class="image">
+                            <div class="overlay">
+                                <div class="text">España</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Francisco de Salinas</td>
+                    <td>La Oreja de Van Gogh<br><br><img class="logo" src="ejerc20-tabla/lovg.jpg"></td>
+                    <td>Lasers</td>
+                </tr>
+                <tr>
+                    <td><div class="container">
+                            <img src="ejerc20-tabla/Francia.png" class="image">
+                                <div class="overlay">
+                                    <div class="text">Francia</div>
+                                </div>
+                        </div>
+                    </td>
+                    <td>Obsidienne</td>
+                    <td>Pony Pony Run Run</td>
+                    <td>Daft Punk<br><br><img class="logo" src="ejerc20-tabla/DP.png"></td>
+                </tr>
+                <tr>
+                    <td><div class="container">
+                        <img src="ejerc20-tabla/RU.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Reino Unido</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Edward Elgar<br><br><img class="logo" src="ejerc20-tabla/EE.jpg"></td>
+                    <td>Ed Sheeran<br><br><img class="logo" src="ejerc20-tabla/EdS2.jpg"></td>
+                    <td>Depeche Mode<br><br><img class="logo" src="ejerc20-tabla/DM.jpg"></td>
+                </tr>
+                <tr>
+                    <td><div class="container">
+                        <img src="ejerc20-tabla/KoreaSur.png" class="image">
+                            <div class="overlay">
+                                <div class="text">Korea del Sur</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Unsuk Chin</td>
+                    <td>Blackpink<br><br><img class="logo" src="ejerc20-tabla/BP.png"></td>
+                    <td>Clazziquai<br><br><img class="logo" src="ejerc20-tabla/Cl.jpg"></td>
+                </tr>
+                <tr>
+                    <td><div class="container">
+                        <img src="ejerc20-tabla/EEUU.jpg" class="image">
+                            <div class="overlay">
+                                <div class="text">Estados Unidos</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Leroy Anderson<br><br><img class="logo" src="ejerc20-tabla/LA.gif"></td>
+                    <td>Jonas Brothers<br><br><img class="logo" src="ejerc20-tabla/JB.png"></td>
+                    <td>The Crystal Method<br><br><img class="logo" src="ejerc20-tabla/CM.jpg"></td>
+                </tr>                
+            </tbody>
+        </table>
+        <br>
+    </body>
+</html>
