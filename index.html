@@ -4,52 +4,182 @@
         <title>Abel MH</title>
         <meta charset="utf-8">
         <style>
-            #presentacion {background-color: rgba(50, 250, 217, 0.828);}
-            #html {background-color: rgb(168, 128, 206);}
-            #css {background-color: rgb(255, 249, 158);}
-            #presentacion p {font-family: Arial, Helvetica, sans-serif;}
+            header {background: url("index/Yo.jpg"); background-size: cover; background-position: center; border-top: 1px dotted black; border-bottom: dotted 0.5px rgb(14, 77, 14);}
+            div#texto  {margin: 30px; padding: 15px; background-color: white; border: 3.5px double black;border-radius: 30px; opacity: 0.92;}
+            
+            table {margin: auto; width: 100%;}            
+            td {width: 50px; padding: 1%;}            
+            .miVideo {height: auto; width: 100%;}
+            #miFoto {height: auto; width: 100%;}
+
+            #fondo {justify-content: center; margin-bottom: 40px;
+            background: linear-gradient(rgb(50, 250, 217) 0%, rgb(171, 144, 196) 20%, rgb(255, 249, 158) 40%, rgb(50, 250, 217) 60%, rgb(171, 144, 196) 80%, rgb(255, 249, 158) 100%);
+            background-size: 400% 300%;
+            animation: BgGradient 10s ease infinite;}
+            @keyframes BgGradient {
+                0% {background-position: 50% 0%;}
+                33% {background-position: 50% 30%;}
+                66% {background-position: 50% 60%;}
+                100% {background-position: 50% 90%;}}
+
+            #html, #css, #etiquetas {padding: 20px; padding-bottom: 50px;}
+            
+            #inicio p {font-family: Arial, Helvetica, sans-serif;}
             #html p {font-family: Verdana, Geneva, Tahoma, sans-serif;}
             #css p {font-family: Georgia, 'Times New Roman', Times, serif;}
-            .centrar p {text-align: center;}
-            .centrar-imagen  {display: block; margin: auto;}
+            #etiquetas p {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+            #fondo h2 {text-decoration: underline rgb(65, 42, 42) dotted;}
+
+            .ejercicios p {text-align: center; line-height: 30px;}
+
+            .boton a {border-radius: 7px; border: 5px groove black; background-image: linear-gradient(rgb(225, 231, 139),rgb(139, 228, 231)); color: black; text-align: center;}
+            .boton a:hover {border: 4px groove grey; background-image: radial-gradient(rgb(248, 255, 152),rgb(124, 195, 197));}
+            a {text-decoration: none; padding: 7px;}
+            ol li {list-style: none; display: inline; padding-left: 1.5%; padding-right: 1.5%;}
+            ol {text-align: center; margin-top: 40px; margin-bottom: 50px;}
+
+            .return {text-align: right; }
+            .return a {border: 4px outset grey; color: black; text-align: center; font-family: cursive;}
+            #R1:hover, #R2:hover, #R3:hover {border: 3px inset grey; background-image: radial-gradient(rgb(114, 31, 31),rgb(255, 255, 255));}
+            
+            #R1 {background: linear-gradient(150deg, rgb(50, 250, 217), rgb(171, 144, 196), rgb(255, 249, 158));
+            background-size: 400% 300%;
+            animation: BgGradientB 10s ease infinite;}
+            #R2 {background: linear-gradient(150deg, rgb(50, 250, 217), rgb(171, 144, 196), rgb(255, 249, 158));
+            background-size: 400% 300%;
+            animation: BgGradientB 10s ease infinite;}
+            #R3 {background: linear-gradient(150deg, rgb(50, 250, 217), rgb(171, 144, 196), rgb(255, 249, 158));
+            background-size: 400% 300%;
+            animation: BgGradientB 10s ease infinite;}
+            @keyframes BgGradientB {
+                0% {background-position: 0% 50%;}
+                50% {background-position: 100% 50%;}
+                100% {background-position: 0% 50%;}}
+            
+            input#spoiler {
+            display: none;}
+            input#spoiler+label {
+                display: block;
+                width: 200px;
+                margin: 0 auto;
+                padding: 5px 20px;
+                background: rgb(120, 231, 157);
+                color: black;
+                text-align: center;
+                font-size: 24px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all .6s;}
+            input#spoiler:checked+label {
+                color: rgb(51, 51, 51);
+                background: rgb(204, 204, 204);}
+            input#spoiler~.spoiler {
+                width: 90%;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                margin: 10px auto 15px;
+                padding: 10px;
+                background: rgb(238, 238, 238);
+                border: 1px solid rgb(120, 231, 157);
+                border-radius: 8px;
+                transition: all .6s;}
+            input#spoiler:checked+label+.spoiler {
+                height: auto;
+                opacity: 1;
+                padding: 10px;}
         </style>
     </head>
     <body>
-        <div id="presentacion">
-            <h1>Mi trabajo enTICII Abel Menéndez Hernández</h1>
-            <p>Me llamo Abel y estoy estudiando 2º de bachillerato en la modalidad de Ciencias en el IES Doctor Fleming.</p>
-            <p>Entre mis gustos personales están los videojuegos y los deportes en general, entre ellos el parkour/freeruning (aunque este curso por falta de tiempo apenas puedo hacer ninguna de los dos).</p>
-            <img class="centrar-imagen" src="Yo.jpg" height="250">
+        <header id="inicio">
+            <div id="texto">
+                <div id="presentacion">
+                    <h1>Mi trabajo en TICII Abel Menéndez Hernández</h1>
+                    <p>Me llamo Abel y estoy estudiando 2º de bachillerato en la modalidad de Ciencias en el IES Doctor
+                        Fleming.</p>
+                    <p>Entre mis gustos personales están los videojuegos y los deportes en general, entre ellos el
+                        parkour/freeruning (aunque este curso por falta de tiempo apenas puedo practicar ninguno de los
+                        dos).</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><video autoplay muted loop class="miVideo">
+                                        <source src="index/Gainer.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.</video></td>
+                                <td><video autoplay muted loop class="miVideo">
+                                        <source src="index/StallBackflip.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.</video></td>
+                                <td><img id="miFoto" src="index/fortnite.gif"></td>
+                                <td><video autoplay muted loop class="miVideo">
+                                        <source src="index/Relojito.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.</video></td>
+                                <td><video autoplay muted loop class="miVideo">
+                                        <source src="index/360DiveRoll.mp4" type="video/mp4">
+                                        Your browser does not support HTML5 video.</video></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="indice">
+                    <ol>
+                        <h2>Enlace a todas las secciones de mi página</h2><br>
+                        <li class="boton"><a href="#html">Ejercicios introducción HTML</a></li>
+                        <li class="boton"><a href="#css"> Ejercicios introducción CSS</a></li>
+                        <li class="boton"><a href="#etiquetas">Ejercicios de más etiquetas</a></li>
+                    </ol>
+                </div>
+            </div>
+        </header>
+        <div id="fondo">
+            <div id="html">
+                <h2>Ejercicios introducción HTML</h2>
+                <div class="ejercicios">
+                    <p><a href="html-ejerc1-intro.html">Ejercicio 1</a><br>
+                        <a href="html-ejerc2-poema.html">Ejercicio 2</a><br>
+                        <a href="html-ejerc3-enfasis.html">Ejercicio 3</a><br>
+                        <a href="html-ejerc4-listas.html">Ejercicio 4</a><br>
+                        <a href="html-ejerc5-utf-8.html">Ejercicio 5</a><br>
+                        <a href="html-ejerc6-img.html">Ejercicio 6</a><br>
+                        <a href="html-ejerc7-viaje.html">Ejercicio 7</a></p>
+                </div>
+                <p class="return"><a id="R1" href="#inicio">Volver al inicio</a></p>
+            </div>
+            <div id="css">
+                <h2>Ejercicios introducción CSS</h2>
+                <div class="ejercicios">
+                    <p><a href="html-ejerc8-color.html">Ejercicio 8</a><br>
+                        <a href="html-ejerc9-criatura.html">Ejercicio 9</a><br>
+                        <a href="html-ejerc10-criatura2.html">Ejercicio 10</a><br>
+                        <a href="html-ejerc11-formato.html">Ejercicio 11</a><br>
+                        <a href="html-ejerc12-Olafs.html">Ejercicio 12</a><br>
+                        <a href="html-ejerc13-clases.html">Ejercicio 13</a><br>
+                        <a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a><br>
+                        <a href="html-ejerc15-selectores.html">Ejercicio 15</a><br>
+                        <a href="html-ejerc16.html">Ejercicio 16</a></p>
+                </div>
+                <p class="return"><a id="R2" href="#inicio">Volver al inicio</a></p>
+            </div>
+            <div id="etiquetas">
+                <h2>Ejercicios de más etiquetas</h2>
+                <div class="ejercicios">
+                    <p><a href="html-ejerc18-vinculos.html">Ejercicio 18</a><br>
+                        <a href="html-ejerc19-vinculos_internos.html">Ejercicio 19</a><br>
+                        <a href="html-ejerc20-tabla.html">Ejercicio 20</a><br>
+                        <a href="html-ejerc21-proeycto_recetas.html">Ejercicio 21</a><br></p>
+                </div>
+                <p class="return"><a id="R3" href="#inicio">Volver al inicio</a></p>
+            </div>
         </div>
-        <div class="centrar" id="html">
-            <h2>Ejercicios introducción HTML</h2>
-            <p><a href="html-ejerc1-intro.html">Ejercicio 1</a><br>
-            <a href="html-ejerc2-poema.html">Ejercicio 2</a><br>
-            <a href="html-ejerc3-enfasis.html">Ejercicio 3</a><br>
-            <a href="html-ejerc4-listas.html">Ejercicio 4</a><br>
-            <a href="html-ejerc5-utf-8.html">Ejercicio 5</a><br>
-            <a href="html-ejerc6-img.html">Ejercicio 6</a><br>
-            <a href="html-ejerc7-viaje.html">Ejercicio 7</a></p>
-        </div>            
-        <div class="centrar" id="css">
-            <h2>Ejercicios introducción CSS</h2>
-            <p><a href="html-ejerc8-color.html">Ejercicio 8</a><br>
-                <a href="html-ejerc9-criatura.html">Ejercicio 9</a><br>
-                <a href="html-ejerc10-criatura2.html">Ejercicio 10</a><br>
-                <a href="html-ejerc11-formato.html">Ejercicio 11</a><br>
-                <a href="html-ejerc12-Olafs.html">Ejercicio 12</a><br>
-                <a href="html-ejerc13-clases.html">Ejercicio 13</a><br>
-                <a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a><br>
-                <a href="html-ejerc15-selectores.html">Ejercicio 15</a><br>
-                <a href="html-ejer16.html">Ejercicio 16</a></p>
-        </div>
-        <div>
-            <h2>Web hosting</h2>
-            <p> Es un servicio de alquiler de un espacio dentro de un servidor donde podrás alojar tu página web haciendo que esta pueda ser visitada por cualquier usuario de internet a cualquier hora del dia</p>
+        <input type="checkbox" id="spoiler" />
+        <label for="spoiler">Web hosting</label>
+        <div class="spoiler">
+            <p> Es un servicio de alquiler de un espacio dentro de un servidor donde podrás alojar tu página web haciendo
+                que
+                esta pueda ser visitada por cualquier usuario de internet a cualquier hora del dia</p>
             <p> El que yo he usado al principio fue "<a href="https://drv.tw/">drivetoweb</a>"<br>
                 https://ztz8ezjjkwmy7z9azlkqva-on.drv.tw/Web/</p>
             <p> Ahora el que estoy usando es "<a href="https://github.com/">Github</a>"<br>
                 http://AbelTIC2Bach.github.io</p>
         </div>
-    </body>
+    </body>    
 </html>
