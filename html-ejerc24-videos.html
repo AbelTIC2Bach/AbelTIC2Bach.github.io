@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Videos</title>
+        <meta charset="utf-8">
+        <style>
+            .img-centrada {display:block; margin:auto; display:table-cell;}
+            * {padding: 5px; margin: 5px; color: ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+            body {background-color: ;}
+            .seccion {font-size: 40px; text-decoration: underline;}
+            .TVideo {font-weight: normal;}
+            h1:hover {background-color: orange; color: black;}
+            #vy:hover {background-color: red; color: white;}
+            #vp:hover {background-color: rgb(81, 180, 212); color: white;}
+            
+            .boton a { border-radius: 7px; background-color:rgb(141, 106, 141); color: cyan; text-align: center;}
+            #lista {padding-left: 15px; border-style: dashed; border-width: 5px; border-radius: 15px; border-color: rgba(220, 20, 60, 0.589);}
+            ol li {list-style: none; display: inline; padding-left: 1.5%; padding-right: 1.5%;}
+            ol {text-align: center; margin-top: 10px; margin-bottom: 20px;}
+            li a {text-decoration: none; padding: 10px; font-size: 20px;}
+
+        </style>
+    </head>
+    <body>
+        <div id="lista">
+            <ol><h2>Enlace a las secciones de la página</h2><br>
+                <li class="boton"><a id="vp" href="#videos_propios">Mis videos</a></li>
+                <li class="boton"><a id="vy" href="#videos_youtube">Videos de youtube</a></li>
+            
+            </ol>
+        </div>
+        <div id="videos_propios" >
+            <h1 class="seccion">Mis videos</h1>
+
+                <h1 class="TVideo">Sideflip</h1>
+                <p>Descripción del video</p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/S1.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+
+                <h1 class="TVideo">Flashkick</h1>
+                <p>Descripción del video</p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/F1.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+
+                <h1 class="TVideo">Cork</h1>
+                <p>Descripción del video</p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/C1.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+
+                <h1 class="TVideo">Backflip</h1>
+                <p>Descripción del video</p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/B1.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+        </div>
+        <div id="videos_youtube">
+            <h1 class="seccion">Videos de youtube</h1>
+
+                <h1 class="TVideo">Sideflip</h1>
+                <p>Descripción del video</p>
+                <iframe class="img-centrada" width="500" height="auto" src="https://www.youtube.com/watch?v=xWcn2hDJDXo"></iframe>
+
+                <h1 class="TVideo">Flashkick</h1>
+                <p>Descripción del video</p>
+                <iframe class="img-centrada" width="500" height="auto" src="https://www.youtube.com/watch?v=xOPUU8YNRbY"></iframe>
+
+                <h1 class="TVideo">Cork</h1>
+                <p>Descripción del video</p>
+                <iframe class="img-centrada" width="500" height="auto" src="https://www.youtube.com/watch?v=b-ceecG-8RQ"></iframe>
+
+                <h1 class="TVideo">Backflip</h1>
+                <p>Descripción del video</p>
+                <iframe width="500" height="300" src="https://www.youtube.com/watch?v=1CdKZFfli4c"></iframe>
+        </div>
+    </body>
+</html>
