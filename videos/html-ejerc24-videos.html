@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Videos</title>
+        <meta charset="utf-8">
+        <style>
+            .img-centrada {display:block; margin:auto; display:table-cell;}
+            * {padding: 5px; margin: 5px; color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+            body {background-color: rgb(244, 247, 108);}
+
+            #lista {padding: 55px; border-style: dashed; border-width: 5px; border-radius: 15px; border-color: rgba(220, 20, 60, 0.589); background-image: url(videos/fondo.jpg); background-size: cover; background-position: center;}
+            ol {text-align: center; margin-top: 10px; margin-bottom: 20px;}
+            ol h2 {font-family: cursive; color: rgb(247, 181, 60); background-color: rgba(0, 0, 0, 0.479);}
+
+            ol li {list-style: none; display: inline; padding-left: 1.5%; padding-right: 1.5%;}
+            .boton a { border-radius: 7px; background-clip: padding-box; background-color:rgba(253, 255, 106, 0.527); color: rgb(71, 13, 13); text-align: center; border: outset 4px rgba(122, 122, 122, 0.767);}
+            li a {text-decoration: none; padding: 10px; font-size: 20px;}
+            #vp:hover {background-color: rgb(81, 180, 212); color: white; border: 3px inset rgba(122, 122, 122, 0.767);}
+            #vy:hover {background-color: red; color: white; border: 3px inset rgba(122, 122, 122, 0.767);}
+
+            .seccion {font-family: 'Courier New', Courier, monospace; font-size: 40px; text-decoration: underline; text-align: center; margin-top: 40px;}
+            #videos_propios .seccion:hover {background-color: rgb(81, 180, 212); color: white; border-radius: 10px;}
+            #videos_youtube .seccion:hover {background-color: red; color: white; border-radius: 10px;}
+
+            .TVideo {font-weight: normal; margin-right: 82%; border-radius: 5px;}
+            h1:hover {font-weight: bold; background-color: rgb(255, 166, 0); color: black; text-align: center;}
+
+        </style>
+    </head>
+    <body>
+        <div id="lista">
+            <ol><h2>ENLACE A LAS SECCIONES DE LA PÁGINA</h2><br>
+                <li class="boton"><a id="vp" href="#videos_propios">Mis videos</a></li>
+                <li class="boton"><a id="vy" href="#videos_youtube">Videos de youtube</a></li>
+            
+            </ol>
+        </div>
+        <div id="videos_propios" >
+            <h1 class="seccion">Mis videos</h1>
+
+                <h1 class="TVideo">Sideflip</h1>
+                <p>Como su nombre indica, se trata de un tipo de voltereta en la cual el cuerpo gira lateralmente en torno al eje que cruza horizontalmente nuestro cuerpo desde adelante hacia atrás por el centro de gravedad.<br>Tiene un<strong>nivel de dificultad bajo</strong>(dentro de lo que son los mortales).</p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/Sideflip.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+
+                <h1 class="TVideo">Flashkick</h1>
+                <p>Se trata de una variante del backflip (ver más abajo) que consiste en conseguir separar las piernas en mitad del salto (desagrupándote) amortiguando así la caída con una sola pierna.<br>Tiene un<strong>nivel de dificultad medio-bajo.</strong></p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/Flashkick.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+
+                <h1 class="TVideo">Cork</h1>
+                <p>Se trata de un tipo de voltereta en la cual se usa el balanceo de una pierna para obtener potencia y giro a la hora de saltar. En el aire el cuerpo debe de girar 360º sobre el eje que va desde nuestra cabeza a los pies a la vez que se gira hacia atrás, logrando en algún momento durante el proceso una posición paralela al suelo.<br>Es uno de mis mortales favoritos ya que visualmente impacta mucho.<br>Tiene un<strong>nivel de dificultad medio.</strong></p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/Cork.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+
+                <h1 class="TVideo">Backflip</h1>
+                <p>Como su nombre indica, se trata de un tipo de voltereta en la cual el cuerpo gira hacia atrás en torno al eje que cruza horizontalmente nuestro cuerpo desde un costado al otro pasando por el centro de gravedad.<br>Es otro de los mortales que más me gustan porque da lugar a multitud de variantes diferentes (como el Flaskick mencionado anteriormente).<br>Tiene un<strong>nivel de dificultad bajo.</strong></p>
+                <video class="img-centrada" width="500" height="auto" controls>
+                    <source src="videos/Backflip.mp4" type="video/mp4">
+                    Tu navegador no soporta el modo vídeo.
+                </video>
+        </div>
+        <div id="videos_youtube">
+            <h1 class="seccion">Videos de youtube</h1>
+
+                <h1 class="TVideo">Sideflip</h1>
+                <p>Shifer es uno de los youtubers de parkour que más me gustan por su carisma y por la altura que consigue alcanzar con todos sus mortales (parece que tuviera muelles en las piernas). Me sirve como inspiración y me gustaría llegar a lograr hacer los mortales como él.</p>
+                <iframe class="img-centrada" width="500" height="281" frameborder="0"  allowfullscreen src="https://www.youtube.com/embed/xWcn2hDJDXo"></iframe>
+
+                <h1 class="TVideo">Flashkick</h1>
+                <p>El Flashkick es un truco que tengo que perfeccionar mucho todavía. Empecé a aprenderlo este verano una vez di por dominado mi backflip. En cuanto a técnica no se diferencia demasiado del backflip (pues es una variante), pero requiere mucho más impulso y eso todavía no lo he conseguido (por eso tengo que usar boya).</p>
+                <iframe class="img-centrada" width="500" height="281" frameborder="0"  allowfullscreen src="https://www.youtube.com/embed/xOPUU8YNRbY"></iframe>
+
+                <h1 class="TVideo">Cork</h1>
+                <p>El Cork me fascina, sin embargo, no me atreví a intentarlo hasta finales de este verano ya que tiene un nivel bastante avanzado para mí, pues nunca antes había intentado un mortal que implicara un twist (giro de 360º sobre el eje vertical). Es obvio que me queda un largo camino para dominarlo, sin embargo, para haberlo entrenado solo 1 semana me he llevado muy buenas sensaciones. Espero lograrlo el verano que viene.</p>
+                <iframe class="img-centrada" width="500" height="281" frameborder="0"  allowfullscreen src="https://www.youtube.com/embed/b-ceecG-8RQ"></iframe>
+
+                <h1 class="TVideo">Backflip</h1>
+                <p>El backflip ha sido uno de los mortales que menos me ha costado dominar. Lo intenté antes con el frontflip (voltereta hacia delante) y el sideflip (voltereta de lado) pero el backflip es el que mejor me sale con diferencia y con el que más seguridad tengo. De todas formas, sigo envidiando la altura que coge este hombre (Shifer) y me gustaría poder perfeccionarlo más.</p>
+                <iframe class="img-centrada" width="500" height="281" frameborder="0"  allowfullscreen src="https://www.youtube.com/embed/1CdKZFfli4c"></iframe>
+        </div>
+    </body>
+</html>
