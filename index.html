@@ -5,11 +5,23 @@
         <meta charset="utf-8">
         <style>
             * {box-sizing: border-box; margin: 0; padding: 0;}
+            a:visited {text-decoration: none; color: black;}
 
             div#todo {background-color: rgb(228, 228, 228); position: relative; width: 100%; z-index: 2; margin-bottom: 200px;}
             
             div#inicio {background: url("index/Yo.jpg"); background-size: cover; background-position: center; border-top: 1px dotted black; border-bottom: dotted 0.5px rgb(14, 77, 14);}
             div#texto  {margin: 30px; padding: 15px; background-color: rgba(255, 255, 255, 0.5); border: 3.5px double black;border-radius: 30px; opacity: 1;}
+
+            .izquierda {position: relative; animation: izq 3s ease-out;}
+            @keyframes izq {
+                0% {left: -400px; opacity: 0;}
+                90% {left: 15px}
+                100% {left: 0px; opacity: 1;}}
+            .derecha {position: relative; animation: der 3s ease-out;}
+            @keyframes der {
+                0% {right: -400px; opacity: 0;}
+                90% {right: 15px}
+                100% {right: 0px; opacity: 1;}}
 
             table {margin: auto; width: 100%; border-spacing: 10px;}            
             td {width: 50px; padding: 0.5%; padding-bottom: 0.1%; border: 6px groove black;}
@@ -29,19 +41,39 @@
 
             #html, #css, #etiquetas, #semantica {padding: 20px; padding-bottom: 50px;}
             
+            header h1 {text-align: center; margin-bottom: 20px; position: relative; animation: titulo 1.5s ease-out;}
+            @keyframes titulo {
+                0% {top: -80px; color: rgba(0, 0, 0, 0);}
+                95% {top: 7px}
+                100% {top: 0px; color: black;}}
+
             #inicio p {font-family: Arial, Helvetica, sans-serif;}
             #html p {font-family: Verdana, Geneva, Tahoma, sans-serif;}
             #css p {font-family: Georgia, 'Times New Roman', Times, serif;}
             #etiquetas p {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
             #semantica p {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
-            #fondo h2 {text-decoration: underline rgb(65, 42, 42) dotted;}
+            #fondo h2 {margin-left: 20px;border-radius: 5px; text-decoration: underline rgb(65, 42, 42) dotted; text-align: center; transition: transform 0.4s ease-out, background-color 0.4s ease-out;}
+            #html h2 {width: 320px;}
+            #css h2 {width: 290px;}
+            #etiquetas h2 {width: 280px;}
+            #semantica h2 {width: 165px;}
+            #fondo h2:hover {background-color: rgba(0, 162, 255, 0.418); transform: scale(1.2,1.2) rotate(-3deg);}
 
-            .ejercicios p {text-align: center; line-height: 30px;}
+            .ejercicios p {color: black; text-align: center; line-height: 30px; border-radius: 10px; margin: auto; width: 110px;}
+
+            div.ejercicios p{transition: transform 0.4s ease-out, background-color 0.4s ease-out;}
+            div.ejercicios p:hover {animation: meneo 1.5s linear infinite; background-color: rgba(255, 0, 0, 0.418); transform: scale(1.2,1.2) rotate(3deg);}
+            @keyframes meneo {
+                0% {transform: rotate(0deg) scale(1,1); right: 0px;}
+                25% {transform: rotate(5deg) scale(1.1,1.1); right: -10px;}
+                50% {transform: rotate(0deg) scale(1,1); right: 0px;}
+                75% {transform: rotate(-5deg) scale(1.1,1.1); right: 10px;}
+                100% {transform: rotate(0deg) scale(1,1); right: 0px;}}
 
             .boton a {border-radius: 7px; border: 5px groove black; background-image: linear-gradient(rgb(225, 231, 139),rgb(139, 228, 231)); color: black; text-align: center;}
             .boton a:hover {border: 4px groove grey; background-image: radial-gradient(rgb(248, 255, 152),rgb(124, 195, 197));}
             a {text-decoration: none; padding: 7px;}
-            ol li {list-style: none; display: inline; padding-left: 1.5%; padding-right: 1.5%;}
+            ol li {list-style: none; display: inline-block; padding-left: 1.5%; padding-right: 1.5%;}
             ol {text-align: center; margin-top: 40px; margin-bottom: 50px; line-height: 47px;}
 
             .return {text-align: right; }
@@ -118,12 +150,12 @@
                 <div id="texto">
                     <header id="presentacion">
                         <h1>Mi trabajo en TICII Abel Menéndez Hernández</h1>
-                        <p>Me llamo Abel y estoy estudiando 2º de bachillerato en la modalidad de Ciencias en el IES Doctor
+                        <p class="izquierda">Me llamo Abel y estoy estudiando 2º de bachillerato en la modalidad de Ciencias en el IES Doctor
                             Fleming.</p>
-                        <p>Entre mis gustos personales están los videojuegos y los deportes en general, entre ellos el
+                        <p class="derecha">Entre mis gustos personales están los videojuegos y los deportes en general, entre ellos el
                             parkour/freeruning (aunque este curso por falta de tiempo apenas puedo practicar ninguno de los
                             dos).</p>
-                        <table>
+                        <table class="izquierda">
                             <tbody>
                                 <tr>
                                     <td><video autoplay muted loop class="miVideo">
@@ -143,7 +175,7 @@
                             </tbody>
                         </table>
                     </header>
-                    <nav id="indice">
+                    <nav id="indice" class="derecha">
                         <ol>
                             <h2>Enlace a todas las secciones de mi página</h2>
                             <li class="boton"><a href="#html">Ejercicios introducción HTML</a></li>
@@ -158,45 +190,45 @@
                 <section id="html">
                     <h2>Ejercicios introducción HTML</h2>
                     <div class="ejercicios">
-                        <p><a href="html-ejerc1-intro.html">Ejercicio 1</a><br>
-                            <a href="html-ejerc2-poema.html">Ejercicio 2</a><br>
-                            <a href="html-ejerc3-enfasis.html">Ejercicio 3</a><br>
-                            <a href="html-ejerc4-listas.html">Ejercicio 4</a><br>
-                            <a href="html-ejerc5-utf-8.html">Ejercicio 5</a><br>
-                            <a href="html-ejerc6-img.html">Ejercicio 6</a><br>
-                            <a href="html-ejerc7-viaje.html">Ejercicio 7</a></p>
+                        <p><a href="html-ejerc1-intro.html">Ejercicio 1</a></p>
+                        <p><a href="html-ejerc2-poema.html">Ejercicio 2</a></p>
+                        <p><a href="html-ejerc3-enfasis.html">Ejercicio 3</a></p>
+                        <p><a href="html-ejerc4-listas.html">Ejercicio 4</a></p>
+                        <p><a href="html-ejerc5-utf-8.html">Ejercicio 5</a></p>
+                        <p><a href="html-ejerc6-img.html">Ejercicio 6</a></p>
+                        <p><a href="html-ejerc7-viaje.html">Ejercicio 7</a></p><br>
                     </div>
                     <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
                 </section>
                 <section id="css">
                     <h2>Ejercicios introducción CSS</h2>
                     <div class="ejercicios">
-                        <p><a href="html-ejerc8-color.html">Ejercicio 8</a><br>
-                            <a href="html-ejerc9-criatura.html">Ejercicio 9</a><br>
-                            <a href="html-ejerc10-criatura2.html">Ejercicio 10</a><br>
-                            <a href="html-ejerc11-formato.html">Ejercicio 11</a><br>
-                            <a href="html-ejerc12-Olafs.html">Ejercicio 12</a><br>
-                            <a href="html-ejerc13-clases.html">Ejercicio 13</a><br>
-                            <a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a><br>
-                            <a href="html-ejerc15-selectores.html">Ejercicio 15</a><br>
-                            <a href="html-ejerc16.html">Ejercicio 16</a></p>
+                        <p><a href="html-ejerc8-color.html">Ejercicio 8</a></p>
+                        <p><a href="html-ejerc9-criatura.html">Ejercicio 9</a></p>
+                        <p><a href="html-ejerc10-criatura2.html">Ejercicio 10</a></p>
+                        <p><a href="html-ejerc11-formato.html">Ejercicio 11</a></p>
+                        <p><a href="html-ejerc12-Olafs.html">Ejercicio 12</a></p>
+                        <p><a href="html-ejerc13-clases.html">Ejercicio 13</a></p>
+                        <p><a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a></p>
+                        <p><a href="html-ejerc15-selectores.html">Ejercicio 15</a></p>
+                        <p><a href="html-ejerc16.html">Ejercicio 16</a></p><br>
                     </div>
                     <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
                 </section>
                 <section id="etiquetas">
                     <h2>Ejercicios de más etiquetas</h2>
                     <div class="ejercicios">
-                        <p><a href="html-ejerc18-vinculos.html">Ejercicio 18</a><br>
-                            <a href="html-ejerc19-vinculos_internos.html">Ejercicio 19</a><br>
-                            <a href="html-ejerc20-tabla.html">Ejercicio 20</a><br>
-                            <a href="html-ejerc21-proeycto_recetas.html">Ejercicio 21</a></p>
+                        <p><a href="html-ejerc18-vinculos.html">Ejercicio 18</a></p>
+                        <p><a href="html-ejerc19-vinculos_internos.html">Ejercicio 19</a></p>
+                        <p><a href="html-ejerc20-tabla.html">Ejercicio 20</a></p>
+                        <p><a href="html-ejerc21-proeycto_recetas.html">Ejercicio 21</a></p><br>
                     </div>
                     <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
                 </section>
                 <section id="semantica">
                     <h2>Web Semántica</h2>
                     <div class="ejercicios">
-                        <p><a href="html-ejerc24-videos.html">Ejercicio 24</a><br></p>
+                        <p><a href="html-ejerc24-videos.html">Ejercicio 24</a></p><br>
                     </div>
                     <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
                 </section>
@@ -216,7 +248,7 @@
             <br>
         </div>
         <footer>
-            <p><img src="index/Logo.png" alt="Logo" height="80"></p>
+            <p><img src="index/Logo.png" alt="Logo" height="90"></p>
             <p>Abel Menéndez Hernández<br>
             Oviedo, Asturias, España</p>            
         </footer>
