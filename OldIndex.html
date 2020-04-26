@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Abel MH</title>
+        <meta charset="utf-8">
+        <style>
+            * {box-sizing: border-box; margin: 0; padding: 0;}
+            a:visited {text-decoration: none; color: black;}
+            html {scroll-behavior: smooth;}
+
+            div#todo {background-color: rgb(228, 228, 228); position: relative; width: 100%; z-index: 2; margin-bottom: 200px;}
+            
+            div#inicio {background: url("index/Yo.jpg"); background-size: cover; background-position: center; border-top: 1px dotted black; border-bottom: dotted 0.5px rgb(14, 77, 14);}
+            div#texto  {margin: 30px; padding: 15px; background-color: rgba(255, 255, 255, 0.5); border: 3.5px double black;border-radius: 30px; opacity: 1;}
+
+            .izquierda {position: relative; animation: izq 3s ease-out;}
+            @keyframes izq {
+                0% {left: -400px; opacity: 0;}
+                90% {left: 15px}
+                100% {left: 0px; opacity: 1;}}
+            .derecha {position: relative; animation: der 3s ease-out;}
+            @keyframes der {
+                0% {right: -400px; opacity: 0;}
+                90% {right: 15px}
+                100% {right: 0px; opacity: 1;}}
+
+            table {margin: auto; width: 100%; border-spacing: 10px;}            
+            td {width: 50px; padding: 0.5%; padding-bottom: 0.1%; border: 6px groove black;}
+            .miVideo {height: auto; width: 100%;}
+            #miFoto {height: auto; width: 100%;}
+
+            #fondo {justify-content: center; margin-bottom: 40px;
+            background: linear-gradient(rgb(50, 250, 217) 0%, rgb(171, 144, 196) 12.5%, rgb(255, 249, 158) 25%, rgb(255, 125, 86) 37.5%, rgb(50, 250, 217) 50%, rgb(171, 144, 196) 62.5%, rgb(255, 249, 158) 75%, rgb(255, 125, 86) 87.5%);
+            background-size: 400% 300%;
+            animation: BgGradient 40s ease infinite;}
+            @keyframes BgGradient {
+                0% {background-position: 50% 0%;}
+                25% {background-position: 50% 18.75%;}
+                50% {background-position: 50% 37.5%;}
+                75% {background-position: 50% 56.25%;}
+                100% {background-position: 50% 75%;}}
+
+            #html, #css, #etiquetas, #semantica {padding: 20px; padding-bottom: 50px;}
+            
+            header h1 {text-align: center; margin-bottom: 20px; position: relative; animation: titulo 1.5s ease-out;}
+            @keyframes titulo {
+                0% {top: -80px; color: rgba(0, 0, 0, 0);}
+                95% {top: 7px}
+                100% {top: 0px; color: black;}}
+
+            #inicio p {font-family: Arial, Helvetica, sans-serif;}
+            #html p {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+            #css p {font-family: Georgia, 'Times New Roman', Times, serif;}
+            #etiquetas p {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+            #semantica p {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+            #fondo h2 {margin-left: 20px;border-radius: 5px; text-decoration: underline rgb(65, 42, 42) dotted; text-align: center; transition: transform 0.4s ease-out, background-color 0.4s ease-out;}
+            #html h2 {width: 320px;}
+            #css h2 {width: 290px;}
+            #etiquetas h2 {width: 280px;}
+            #semantica h2 {width: 165px;}
+            #fondo h2:hover {background-color: rgba(0, 162, 255, 0.418); transform: scale(1.2,1.2) rotate(-3deg);}
+
+            .ejercicios p {color: black; text-align: center; line-height: 30px; border-radius: 10px; margin: auto; width: 110px;}
+
+            div.ejercicios p{transition: transform 0.4s ease-out, background-color 0.4s ease-out;}
+            div.ejercicios p:hover {animation: meneo 1.5s linear infinite; background-color: rgba(255, 0, 0, 0.418); transform: scale(1.2,1.2) rotate(3deg);}
+            @keyframes meneo {
+                0% {transform: rotate(0deg) scale(1,1); right: 0px;}
+                25% {transform: rotate(5deg) scale(1.1,1.1); right: -10px;}
+                50% {transform: rotate(0deg) scale(1,1); right: 0px;}
+                75% {transform: rotate(-5deg) scale(1.1,1.1); right: 10px;}
+                100% {transform: rotate(0deg) scale(1,1); right: 0px;}}
+
+            .boton a {border-radius: 7px; border: 5px groove black; background-image: linear-gradient(rgb(225, 231, 139),rgb(139, 228, 231)); color: black; text-align: center;}
+            .boton a:hover {border: 4px groove grey; background-image: radial-gradient(rgb(248, 255, 152),rgb(124, 195, 197));}
+            a {text-decoration: none; padding: 7px;}
+            ol li {list-style: none; display: inline-block; padding-left: 1.5%; padding-right: 1.5%;}
+            ol {text-align: center; margin-top: 40px; margin-bottom: 50px; line-height: 47px;}
+
+            .return {text-align: right; }
+            .return a {border: 4px outset grey; color: black; text-align: center; font-family: cursive;}
+            .R:hover {border: 3px inset grey; background-image: radial-gradient(rgb(114, 31, 31),rgb(255, 255, 255));}
+            
+            .R {background: linear-gradient(150deg, rgb(94, 255, 228), rgb(171, 144, 196), rgb(255, 249, 158), rgb(255, 125, 86));
+            background-size: 400% 300%;
+            animation: BgGradientB 6s ease infinite;}
+            @keyframes BgGradientB {
+                0% {background-position: 0% 50%;}
+                50% {background-position: 100% 50%;}
+                100% {background-position: 0% 50%;}}
+
+            input#oculto {display: none;}
+            input#oculto+label {
+                display: block;
+                width: 200px;
+                margin: 0 auto;
+                padding: 5px 20px;
+                background: linear-gradient(210deg, rgb(120, 231, 157) 47%, white 50%, rgb(120, 231, 157) 53%);
+                background-size: 400% 300%;
+                animation: BgGradientC 3s ease infinite;
+                border: rgb(74, 138, 95) solid 3px;
+                color: black;
+                text-align: center;
+                font-size: 24px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all .6s;}
+            @keyframes BgGradientC {
+                0% {background-position: 100% 50%;}
+                100% {background-position: 0% 50%;}}
+
+            input#oculto+label:hover {border: rgb(0, 117, 212) double 3px;}
+            input#oculto:checked+label {
+                color: rgb(51, 51, 51);
+                background: rgb(204, 204, 204);}
+            input#oculto~.oculto {
+                width: 90%;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                margin: 10px auto;
+                padding: 10px;
+                background: rgb(238, 238, 238);
+                border: 1px solid rgb(120, 231, 157);
+                border-radius: 8px;
+                transition: all .6s;}
+            input#oculto:checked+label+.oculto {
+                height: auto;
+                opacity: 1;
+                padding: 10px;}
+
+            footer {
+            padding: 30px;
+            background-color: rgb(38, 38, 38);
+            bottom: 0;
+            color: rgb(102, 102, 102);
+            display: flex;
+            height: 200px;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+            align-items: center;
+            justify-content: center;}
+
+            footer p {margin-left: 50px;}
+        </style>
+    </head>
+    <body>
+        <div id="todo">
+            <div id="inicio">
+                <div id="texto">
+                    <header id="presentacion">
+                        <h1>Mi trabajo en TICII Abel Menéndez Hernández</h1>
+                        <p class="izquierda">Me llamo Abel y estoy estudiando 2º de bachillerato en la modalidad de Ciencias en el IES Doctor
+                            Fleming.</p>
+                        <p class="derecha">Entre mis gustos personales están los videojuegos y los deportes en general, entre ellos el
+                            parkour/freeruning (aunque este curso por falta de tiempo apenas puedo practicar ninguno de los
+                            dos).</p>
+                        <table class="izquierda">
+                            <tbody>
+                                <tr>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/Gainer.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/StallBackflip.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                    <td><img id="miFoto" src="index/fortnite.gif"></td>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/Relojito.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/360DiveRoll.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </header>
+                    <nav id="indice" class="derecha">
+                        <ol>
+                            <h2>Enlace a todas las secciones de mi página</h2>
+                            <li class="boton"><a href="#html">Ejercicios introducción HTML</a></li>
+                            <li class="boton"><a href="#css"> Ejercicios introducción CSS</a></li>
+                            <li class="boton"><a href="#etiquetas">Ejercicios de más etiquetas</a></li>
+                            <li class="boton"><a href="#semantica">Ejercicios Web Semántica</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <main id="fondo">
+                <section id="html">
+                    <h2>Ejercicios introducción HTML</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc1-intro.html">Ejercicio 1</a></p>
+                        <p><a href="html-ejerc2-poema.html">Ejercicio 2</a></p>
+                        <p><a href="html-ejerc3-enfasis.html">Ejercicio 3</a></p>
+                        <p><a href="html-ejerc4-listas.html">Ejercicio 4</a></p>
+                        <p><a href="html-ejerc5-utf-8.html">Ejercicio 5</a></p>
+                        <p><a href="html-ejerc6-img.html">Ejercicio 6</a></p>
+                        <p><a href="html-ejerc7-viaje.html">Ejercicio 7</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
+                </section>
+                <section id="css">
+                    <h2>Ejercicios introducción CSS</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc8-color.html">Ejercicio 8</a></p>
+                        <p><a href="html-ejerc9-criatura.html">Ejercicio 9</a></p>
+                        <p><a href="html-ejerc10-criatura2.html">Ejercicio 10</a></p>
+                        <p><a href="html-ejerc11-formato.html">Ejercicio 11</a></p>
+                        <p><a href="html-ejerc12-Olafs.html">Ejercicio 12</a></p>
+                        <p><a href="html-ejerc13-clases.html">Ejercicio 13</a></p>
+                        <p><a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a></p>
+                        <p><a href="html-ejerc15-selectores.html">Ejercicio 15</a></p>
+                        <p><a href="html-ejerc16.html">Ejercicio 16</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
+                </section>
+                <section id="etiquetas">
+                    <h2>Ejercicios de más etiquetas</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc18-vinculos.html">Ejercicio 18</a></p>
+                        <p><a href="html-ejerc19-vinculos_internos.html">Ejercicio 19</a></p>
+                        <p><a href="html-ejerc20-tabla.html">Ejercicio 20</a></p>
+                        <p><a href="html-ejerc21-proeycto_recetas.html">Ejercicio 21</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
+                </section>
+                <section id="semantica">
+                    <h2>Web Semántica</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc24-videos.html">Ejercicio 24</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#inicio">Volver al inicio</a></p>
+                </section>
+            </main>
+            <input type="checkbox" id="oculto"/>
+            <label for="oculto">Web hosting</label>
+            <article class="oculto">
+                <p> Es un servicio de alquiler de un espacio dentro de un servidor donde podrás alojar tu página web
+                    haciendo
+                    que
+                    esta pueda ser visitada por cualquier usuario de internet a cualquier hora del dia</p>
+                <p> El que yo he usado al principio fue "<a href="https://drv.tw/">drivetoweb</a>"<br>
+                    https://ztz8ezjjkwmy7z9azlkqva-on.drv.tw/Web/</p>
+                <p> Ahora el que estoy usando es "<a href="https://github.com/">Github</a>"<br>
+                    http://AbelTIC2Bach.github.io</p>
+            </article>
+            <br>
+        </div>
+        <footer>
+            <p><img src="index/Logo.png" alt="Logo" height="90"></p>
+            <p>Abel Menéndez Hernández<br>
+            Oviedo, Asturias, España</p>            
+        </footer>
+    </body>
+</html>
