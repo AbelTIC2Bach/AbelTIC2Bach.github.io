@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Responsivo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            font-size: 2vw;
+        }
+
+        body {
+            display: grid;
+            gap: 10px 20px;
+            grid-template-rows: 100px 1fr auto;
+            grid-template-columns: 1fr 200px;
+            grid-template-areas: "header header"
+                "content aside"
+                "footer aside";
+        }
+
+        @media (max-width: 600px) {
+            body {
+                gap: 0;
+                grid-template-rows: auto 1fr auto auto;
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                    "content"
+                    "aside"
+                    "footer";
+            }
+        }
+
+        header {
+            grid-area: header;
+            background-color: pink;
+            border: rgb(204, 152, 162) solid 4px;
+            border-radius: 5px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: green;
+            border: rgb(1, 83, 1) solid 4px;
+            border-radius: 5px;
+        }
+
+        main {
+            grid-area: content;
+            background-color: lightblue;
+            border: rgb(123, 155, 165) solid 4px;
+            border-radius: 5px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: yellow;
+            border: rgb(192, 192, 2) solid 4px;
+            border-radius: 5px;
+        }
+
+        main section {
+            margin: 2.5rem 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <aside>Aside</aside>
+    <main>Content
+        <section>
+            <h1>px</h1>
+            <p>Píxeles</p>
+            <h1>fr</h1>
+            <p>Permite dividir rápidamente una cuadrícula en columnas o filas proporcionales (fracciones).</p>
+            <h1>em</h1>
+            <p>Relativo al tamaño de fuente de un elemento. Si, por ejemplo, utilizamos 3em (font-size: 3em); mi texto
+                aumentará 3 veces su tamaño en relación al tamaño que se esté utilizando por defecto.</p>
+            <h1>vw</h1>
+            <p>Porcentaje relativo a la anchura del viewport.</p>
+            <h1>vh</h1>
+            <p>Porcentaje relativo a la altura del viewport.</p>
+            <h1>%</h1>
+            <p>Porcentaje, puede ser relativo frente a varios elementos, si trabajamos con fuentes es relativo a la
+                fuente, pero si lo aplicamos a width es relativo a la anchura del contenedor, por poner dos ejemplos.
+            </p>
+            <h1>auto</h1>
+            <p>Establece automaticamente el tamaño que considera adecuado.</p>
+        </section>
+        <section>
+            <h1>Opinión</h1>
+            <p>En el caso de usar los píxeles como unidad depende de lo que pretenda hacer cada uno en su página web, de
+                esta forma se fija la medida independientemente del dispositivo (no es muy recomendable). Usar como
+                unidades "fr" o "auto" nos ayuda a dividir más facil la página en partes proporcionales, haciendo así
+                que su aspecto mejore.</p>
+        </section>
+        <section>
+            <h1>Comportamiento responsivo</h1>
+            <p>Al utilizar media queries hacemos que la página detecte si la ventana en la que se está viendo tiene más
+                o menos de 600px. De esta forma conseguimos darle diseños distintos dependiendo del dispositivo en el
+                que se esté viendo la página (diseño responsivo)</p>
+        </section>
+    </main>
+    <footer>Footer</footer>
+</body>
+
+</html>

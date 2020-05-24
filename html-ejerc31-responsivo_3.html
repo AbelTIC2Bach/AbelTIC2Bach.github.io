@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Malla</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            font-size: 2vw;
+        }
+
+        #contenedor {
+            border: 3px black solid;
+            display: grid;
+            gap: 0.1rem;
+            grid-template: 200px 200px / 400px 400px;
+            width: 810px;
+        }
+
+        #elem-1 {
+            align-self: stretch;
+            justify-self: stretch;
+            background-color: mediumvioletred;
+            border-radius: 3px;
+            border: 2px solid rgb(121, 13, 81);
+            padding: 10px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        #elem-2 {
+            align-self: end;
+            justify-self: start;
+            background-color: mediumturquoise;
+            border-radius: 3px;
+            border: 2px solid rgb(41, 116, 113);
+            padding: 10px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        #elem-3 {
+            grid-column: span 2;
+            align-self: center;
+            justify-self: center;
+            background-color: limegreen;
+            border-radius: 3px;
+            border: 2px solid rgb(24, 99, 24);
+            padding: 10px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="elem-1">align-self: stretch;<br>justify-self: stretch;</div>
+        <div id="elem-2">align-self: end;<br>justify-self: start;</div>
+        <div id="elem-3">grid-column: span 2;<br>align-self: center;<br>justify-self: center;</div>
+    </div>
+</body>
+
+</html>
