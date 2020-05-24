@@ -1,0 +1,780 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Abel MH</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            font-family: 'Merriweather', serif;
+            --celeste: rgb(50, 250, 217);
+            --lila: rgb(171, 144, 196);
+            --amarillo: rgb(255, 249, 158);
+            --naranja: rgb(255, 125, 86);
+            --rojogrisaceo: rgba(58, 29, 29, 0.877);
+            --fondo: rgb(228, 228, 228);
+            font-size: 1vw;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        div#background {
+            background-color: var(--fondo);
+            position: relative;
+            width: 100%;
+            z-index: 2;
+            margin-bottom: 20rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            min-height: 3.5rem;
+            width: 100%;
+            z-index: 2000;
+            color: white;
+        }
+
+        header div {
+            position: fixed;
+            top: -1.7rem;
+            left: -1.7rem;
+            background-color: var(--rojogrisaceo);
+            font-size: 1rem;
+            border-radius: 2rem;
+            padding: 3rem 1.5rem 1.5rem 3rem;
+            animation: div 1s ease 0.6s backwards;
+        }
+
+        @keyframes div {
+            0% {
+                top: -10.5rem;
+                left: -10.5rem;
+            }
+
+            75% {
+                left: 0rem;
+            }
+
+            100% {
+                top: -1.7rem;
+                left: -1.7rem
+            }
+        }
+
+        header nav {
+            position: fixed;
+            top: -4rem;
+            right: 2rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            text-align: right;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            min-width: 10rem;
+            background-color: var(--rojogrisaceo);
+            border-radius: 2rem;
+            padding: 5rem 1rem 1rem;
+            transition: ease-in transform 0.3s;
+        }
+
+        header nav ul li.menu:hover {
+            transform: translate(0, 0.7rem);
+        }
+
+        header nav ul li ul {
+            display: none;
+        }
+
+        header nav ul li:hover li {
+            display: block;
+            text-align: center;
+        }
+
+        .submenu:hover ul {
+            display: block;
+        }
+
+        .submenu:hover ul li {
+            display: block;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 1rem;
+            margin: 1rem;
+            transition: ease-in 0.5s;
+        }
+
+        .submenu ul li:hover {
+            background-color: rgba(116, 90, 90, 0.877);
+            transform: scale(1.1, 1.2);
+        }
+
+        nav a {
+            color: white;
+            transition: ease-in 0.3s;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        nav ul li#uno {
+            position: relative;
+            animation: nav 1.5s ease-out;
+        }
+
+        nav ul li#dos {
+            position: relative;
+            animation: nav 1.5s ease-out 0.6s backwards;
+        }
+
+        nav ul li#tres {
+            position: relative;
+            animation: nav 1.5s ease-out 1.2s backwards;
+        }
+
+        @keyframes nav {
+            0% {
+                top: -10.5rem;
+
+            }
+
+            100% {
+                top: 0rem;
+
+            }
+        }
+
+
+        .hero {
+            background-image: url("index/hero.jpg");
+            background-color: var(--fondo);
+            height: 40rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: center;
+        }
+
+        .hero div {
+            position: relative;
+            top: 10rem;
+            left: 0rem;
+            background-color: rgba(128, 128, 128, 0.842);
+            color: black;
+            font-size: 1.25rem;
+            max-width: 70%;
+            padding: 3rem;
+        }
+
+        .hero div p {
+            padding-top: 3rem;
+            columns: 2;
+        }
+
+        div#fondo_bio {
+            background: url("index/Yo.jpg");
+            background-size: cover;
+            background-position: center;
+            border-top: 0.5px dotted black;
+            border-bottom: dotted 0.5px rgb(14, 77, 14);
+        }
+
+        div#texto_bio {
+            margin: 6rem 4rem 5rem;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 0.4rem double black;
+            border-radius: 4rem;
+            opacity: 1;
+        }
+
+        .izquierda {
+            position: relative;
+            animation: izq 3s ease-out;
+        }
+
+        @keyframes izq {
+            0% {
+                left: -50rem;
+                opacity: 0;
+            }
+
+            90% {
+                left: 2rem
+            }
+
+            100% {
+                left: 0rem;
+                opacity: 1;
+            }
+        }
+
+        .derecha {
+            position: relative;
+            animation: der 3s ease-out;
+        }
+
+        @keyframes der {
+            0% {
+                right: -50rem;
+                opacity: 0;
+            }
+
+            90% {
+                right: 2rem
+            }
+
+            100% {
+                right: 0rem;
+                opacity: 1;
+            }
+        }
+
+        table {
+            margin: auto;
+            width: 100%;
+            border-spacing: 1.5rem;
+        }
+
+        td {
+            width: 6.5rem;
+            padding: 0.5%;
+            padding-bottom: 0.1%;
+            border: 0.8rem groove black;
+        }
+
+        .miVideo {
+            height: auto;
+            width: 100%;
+        }
+
+        #miFoto {
+            height: auto;
+            width: 100%;
+        }
+
+        #fondo_ejs {
+            justify-content: center;
+            margin-bottom: 5rem;
+            background: linear-gradient(rgb(50, 250, 217) 0%, rgb(171, 144, 196) 12.5%, rgb(255, 249, 158) 25%, rgb(255, 125, 86) 37.5%, rgb(50, 250, 217) 50%, rgb(171, 144, 196) 62.5%, rgb(255, 249, 158) 75%, rgb(255, 125, 86) 87.5%);
+            background-size: 400% 300%;
+            animation: BgGradient 40s ease infinite;
+        }
+
+        @keyframes BgGradient {
+            0% {
+                background-position: 50% 0%;
+            }
+
+            25% {
+                background-position: 50% 18.75%;
+            }
+
+            50% {
+                background-position: 50% 37.5%;
+            }
+
+            75% {
+                background-position: 50% 56.25%;
+            }
+
+            100% {
+                background-position: 50% 75%;
+            }
+        }
+
+        #html,
+        #css,
+        #etiquetas,
+        #semantica {
+            padding: 2.5rem 2.5rem 6.5rem;
+        }
+
+        #texto_bio h1 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+            animation: titulo 1.5s ease-out;
+        }
+
+        @keyframes titulo {
+            0% {
+                top: -10.5rem;
+                color: rgba(0, 0, 0, 0);
+            }
+
+            95% {
+                top: 1rem
+            }
+
+            100% {
+                top: 0rem;
+                color: black;
+            }
+        }
+
+        #fondo_bio p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.25rem;
+        }
+
+        #html p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #css p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #etiquetas p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #semantica p {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #fondo_ejs h2 {
+            margin: 3.8rem 2.5rem 1.7rem;
+            border-radius: 0.5rem;
+            text-decoration: underline rgb(65, 42, 42) dotted;
+            text-align: center;
+            transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+            line-height: 3rem;
+        }
+
+        #html h2 {
+            width: 25rem;
+        }
+
+        #css h2 {
+            width: 25rem;
+        }
+
+        #etiquetas h2 {
+            width: 40rem;
+        }
+
+        #semantica h2 {
+            width: 40rem;
+        }
+
+        #fondo_ejs h2:hover {
+            background-color: rgba(0, 162, 255, 0.418);
+            transform: scale(1.2, 1.2) rotate(-3deg);
+        }
+
+        .ejercicios {
+            width: 55%;
+            margin: auto;
+        }
+
+        #html .ejercicios,
+        #css .ejercicios,
+        #etiquetas .ejercicios {
+            columns: 2;
+        }
+
+        .ejercicios p {
+            color: black;
+            text-align: center;
+            line-height: 3.5rem;
+            border-radius: 1rem;
+            margin: auto;
+            width: 11rem;
+            font-size: 1.5rem;
+        }
+
+        div.ejercicios p {
+            transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+        }
+
+        div.ejercicios p:hover {
+            animation: meneo 1.5s linear infinite;
+            background-color: rgba(255, 0, 0, 0.418);
+            transform: scale(1.2, 1.2) rotate(3deg);
+        }
+
+        @keyframes meneo {
+            0% {
+                transform: rotate(0deg) scale(1, 1);
+                right: 0rem;
+            }
+
+            25% {
+                transform: rotate(5deg) scale(1.1, 1.1);
+                right: -1rem;
+            }
+
+            50% {
+                transform: rotate(0deg) scale(1, 1);
+                right: 0rem;
+            }
+
+            75% {
+                transform: rotate(-5deg) scale(1.1, 1.1);
+                right: 1rem;
+            }
+
+            100% {
+                transform: rotate(0deg) scale(1, 1);
+                right: 0rem;
+            }
+        }
+
+        .boton a {
+            border-radius: 0.8rem;
+            border: 0.5rem groove black;
+            background-image: linear-gradient(rgb(225, 231, 139), rgb(139, 228, 231));
+            color: black;
+            text-align: center;
+        }
+
+        .boton a:hover {
+            border: 0.4rem groove grey;
+            background-image: radial-gradient(rgb(248, 255, 152), rgb(124, 195, 197));
+        }
+
+        a {
+            text-decoration: none;
+            padding: 0.8rem;
+        }
+
+        .return {
+            text-align: right;
+        }
+
+        .return a {
+            border: 0.4rem outset grey;
+            color: black;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1.2rem;
+        }
+
+        .R:hover {
+            border: 0.3rem inset grey;
+            background-image: radial-gradient(rgb(114, 31, 31), rgb(255, 255, 255));
+        }
+
+        .R {
+            background: linear-gradient(150deg, rgb(94, 255, 228), rgb(171, 144, 196), rgb(255, 249, 158), rgb(255, 125, 86));
+            background-size: 400% 300%;
+            animation: BgGradientB 6s ease infinite;
+        }
+
+        @keyframes BgGradientB {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        input#oculto {
+            display: none;
+        }
+
+        input#oculto+label {
+            display: block;
+            width: 23rem;
+            margin: 0 auto;
+            padding: 0.6rem 2.6rem;
+            background: linear-gradient(210deg, rgb(120, 231, 157) 47%, white 50%, rgb(120, 231, 157) 53%);
+            background-size: 400% 300%;
+            animation: BgGradientC 3s ease infinite;
+            border: rgb(74, 138, 95) solid 0.3rem;
+            color: black;
+            text-align: center;
+            font-size: 2.8rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all .6s;
+        }
+
+        @keyframes BgGradientC {
+            0% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        input#oculto+label:hover {
+            border: rgb(0, 117, 212) double 0.3rem;
+        }
+
+        input#oculto:checked+label {
+            color: rgb(51, 51, 51);
+            background: rgb(204, 204, 204);
+        }
+
+        input#oculto~.oculto {
+            width: 90%;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin: 1.3rem auto;
+            padding: 1.5rem;
+            background: rgb(238, 238, 238);
+            border: 0.1rem solid rgb(120, 231, 157);
+            border-radius: 1rem;
+            transition: all .6s;
+        }
+
+        input#oculto:checked+label+.oculto {
+            height: auto;
+            opacity: 1;
+            padding: 1.5rem;
+        }
+
+        footer {
+            padding: 4rem;
+            background-color: rgb(38, 38, 38);
+            bottom: 0;
+            color: rgb(102, 102, 102);
+            height: 20rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        footer p {
+            line-height: 1.8rem;
+        }
+
+        footer #logo {
+            display: block;
+            position: fixed;
+            left: 40%;
+            bottom: 5rem;
+        }
+
+        footer div#logo img {
+            width: auto;
+            height: 8rem;
+        }
+
+        footer #autor {
+            display: block;
+            position: fixed;
+            left: 50%;
+            bottom: 7rem;
+        }
+
+        footer #referencias {
+            display: block;
+            position: fixed;
+            left: 5%;
+            bottom: 6rem;
+        }
+
+        footer #otros {
+            display: block;
+            position: fixed;
+            left: 80%;
+            bottom: 12rem;
+        }
+
+        footer #contacto {
+            display: block;
+            position: fixed;
+            left: 80%;
+            bottom: 5rem;
+        }
+
+        footer a {
+            transition: 0.5s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contendor-fijo-izquierda">
+            <h1>Mi trabajo en TICII Abel MH</h1>
+        </div>
+        <nav class="contendor-fijo-derecha">
+            <ul>
+                <li id="uno" class="submenu">Mis trabajos TICII
+                    <ul>
+                        <li><a href="#html">Introducción HTML</a></li>
+                        <li><a href="#css">Introducción CSS</a></li>
+                        <li><a href="#etiquetas">Introducción AMPLIACIÓN HTML Y CSS</a></li>
+                        <li><a href="#semantica">Introducción WEB SEMÁNTICA Y VÍDEOS</a></li>
+                    </ul>
+                </li>
+                <li id="dos" class="menu"><a href="#webhosting">Sobre el Web Hosting</a></li>
+                <li id="tres" class="menu"><a href="OldIndex.html">Mi último index</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="background">
+        <div class="hero">
+            <div class="izquierda">
+                <h2>Programación en HTML y CSS</h2>
+                <p>En esta página se recoge todo mi progreso en programación de páginas web exclusivamente con lenguaje
+                    HTML y CSS a lo largo de todo el curso 2019-2020 (2º de bachiller). Todo lo que se ve,
+                    tanto esta misma página como las enlazadas, están todas escritas por mí. A lo largo de esta página
+                    encontrarás una breve biografía mia, todos los ejercicios que he ido haciendo a lo largo de
+                    este curso y una pequeña definición de lo que es un "Web Hosting".<br>Espero que te guste.</p>
+            </div>
+        </div>
+        <main>
+            <article>
+                <div id="fondo_bio">
+                    <div id="texto_bio">
+                        <h1>Biografía: Abel Menéndez Hernández</h1>
+                        <p class="izquierda">Me llamo Abel y estoy estudiando 2º de bachillerato en la modalidad de
+                            Ciencias en el IES Doctor Fleming.</p>
+                        <p class="derecha">Entre mis gustos personales están los videojuegos y los deportes en general,
+                            entre ellos el parkour/freeruning (aunque este curso por falta de tiempo apenas puedo
+                            practicar ninguno de los dos).</p>
+                        <table class="izquierda">
+                            <tbody>
+                                <tr>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/Gainer.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/StallBackflip.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                    <td><img id="miFoto" src="index/fortnite.gif"></td>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/Relojito.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                    <td><video autoplay muted loop class="miVideo">
+                                            <source src="index/360DiveRoll.mp4" type="video/mp4">
+                                            Tu navegador no soporta video de HTML5.</video></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </article>
+            <article id="fondo_ejs">
+                <section id="html">
+                    <h2>Ejercicios introducción HTML</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc1-intro.html">Ejercicio 1</a></p>
+                        <p><a href="html-ejerc2-poema.html">Ejercicio 2</a></p>
+                        <p><a href="html-ejerc3-enfasis.html">Ejercicio 3</a></p>
+                        <p><a href="html-ejerc4-listas.html">Ejercicio 4</a></p>
+                        <p><a href="html-ejerc5-utf-8.html">Ejercicio 5</a></p>
+                        <p><a href="html-ejerc6-img.html">Ejercicio 6</a></p>
+                        <p><a href="html-ejerc7-viaje.html">Ejercicio 7</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#background">Volver al inicio</a></p>
+                </section>
+                <section id="css">
+                    <h2>Ejercicios introducción CSS</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc8-color.html">Ejercicio 8</a></p>
+                        <p><a href="html-ejerc9-criatura.html">Ejercicio 9</a></p>
+                        <p><a href="html-ejerc10-criatura2.html">Ejercicio 10</a></p>
+                        <p><a href="html-ejerc11-formato.html">Ejercicio 11</a></p>
+                        <p><a href="html-ejerc12-Olafs.html">Ejercicio 12</a></p>
+                        <p><a href="html-ejerc13-clases.html">Ejercicio 13</a></p>
+                        <p><a href="html-ejerc14-desafio-clases.html">Ejercicio 14</a></p>
+                        <p><a href="html-ejerc15-selectores.html">Ejercicio 15</a></p>
+                        <p><a href="html-ejerc16.html">Ejercicio 16</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#background">Volver al inicio</a></p>
+                </section>
+                <section id="etiquetas">
+                    <h2>Ejercicios introducción AMPLIACIÓN HTML Y CSS</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc18-vinculos.html">Ejercicio 18</a></p>
+                        <p><a href="html-ejerc19-vinculos_internos.html">Ejercicio 19</a></p>
+                        <p><a href="html-ejerc20-tabla.html">Ejercicio 20</a></p>
+                        <p><a href="html-ejerc21-proeycto_recetas.html">Ejercicio 21</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#background">Volver al inicio</a></p>
+                </section>
+                <section id="semantica">
+                    <h2>Ejercicios introducción WEB SEMÁNTICA Y VÍDEOS</h2>
+                    <div class="ejercicios">
+                        <p><a href="html-ejerc24-videos.html">Ejercicio 24</a></p><br>
+                    </div>
+                    <p class="return"><a class="R" href="#background">Volver al inicio</a></p>
+                </section>
+            </article>
+            <article id="webhosting">
+                <input type="checkbox" id="oculto" />
+                <label for="oculto">Web hosting</label>
+                <div class="oculto">
+                    <p> Es un servicio de alquiler de un espacio dentro de un servidor donde podrás alojar tu página web
+                        haciendo
+                        que
+                        esta pueda ser visitada por cualquier usuario de internet a cualquier hora del dia</p>
+                    <p> El que yo he usado al principio ha sido "<a href="https://drv.tw/">drivetoweb</a>"<br>
+                        https://ztz8ezjjkwmy7z9azlkqva-on.drv.tw/Web/</p>
+                    <p> Ahora el que estoy usando es "<a href="https://github.com/">Github</a>"<br>
+                        http://AbelTIC2Bach.github.io</p>
+                </div>
+                <br>
+            </article>
+        </main>
+    </div>
+    <footer>
+        <div id="logo"><img src="index/Logo.png" alt="Logo"></div>
+        <div id="autor">
+            <p>Abel Menéndez Hernández<br>
+                Oviedo, Asturias, España</p>
+        </div>
+        <div id="referencias">
+            <p>Volver a:</p>
+            <p><a href="#html">Introducción HTML</a><br>
+                <a href="#css">Introducción CSS</a><br>
+                <a href="#etiquetas">Introducción AMPLIACIÓN HTML Y CSS</a><br>
+                <a href="#semantica">Introducción WEB SEMÁNTICA Y VÍDEOS</a></p>
+        </div>
+        <div id="otros">
+            <p>Otros:<br>
+                <a href="OldIndex.html">Mi último index</a></p>
+        </div>
+        <div id="contacto">
+            <p>
+                Contacto:<br>
+                abelmh41@educastur.es
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
